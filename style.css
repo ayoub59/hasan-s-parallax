@@ -1329,3 +1329,34 @@
   font-style: normal;
   font-display: swap;
 }
+
+/* cursor animation */
+
+.cursor {
+  width: 20px;
+  height: 20px;
+  border: 2px solid #303030;
+  color: #303030;
+  border-radius: 50%;
+  position: absolute;
+  transition-duration: 200ms;
+  transition-timing-function: ease-out;
+  animation: cursorAnim 0.5s infinite alternate;
+  pointer-events: none;
+  z-index: 100;
+  /* display: none; */
+}
+.cursor::after {
+  content: "";
+  width: 10px;
+  height: 10px;
+  position: absolute;
+  border-radius: 50%;
+  opacity: 0.5;
+  top: -8px;
+  left: -8px;
+  animation: cursorAnim2 0.5s infinite alternate;
+}
+* {
+  cursor: none;
+}

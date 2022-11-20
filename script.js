@@ -1,3 +1,14 @@
+// cursor animation
+const cursor = document.querySelector('.cursor');
+
+document.addEventListener('mousemove', e => {
+    // cursor.style.display = "flex";
+    // console.log(cursor.style.display)
+    cursor.setAttribute("style", "top: " + (e.pageY - 10) + "px; left: " + (e.pageX - 10) + "px;")
+})
+
+
+
 // define the targets 
 const qualityWork1 = document.querySelector(".image-6");
 const qualityWork2 = document.querySelector(".image-7");
@@ -48,7 +59,7 @@ window.addEventListener("scroll", function (e) {
     jaket.style.transform = 'translate3d(0px,' + jaketRate + '%, 0px)';
     green.style.transform = 'translate3d(0px,' + woodRate + '%, 0px)';
 
-    console.log(blueRate)
+    // console.log(blueRate)
 
 
     // console.log(finalRate1)
@@ -144,3 +155,5 @@ window.addEventListener("scroll", function (e) {
 // });
 // // how to give each item a random value of it's own
 // // 
+
+
